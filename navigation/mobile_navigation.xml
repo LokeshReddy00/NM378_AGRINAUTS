@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ioc.ui.home.HomeFragmentmain"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home1">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.example.ioc.nav_history"
+        android:label="History"
+        tools:layout="@layout/fragment_nav_history" />
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.ioc.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calender"
+        android:name="com.example.ioc.Calender"
+        android:label="Calender"
+        tools:layout="@layout/fragment_calender" />
+    <fragment
+        android:id="@+id/trader"
+        android:name="com.example.ioc.ui.traderclass.Trader"
+        android:label="Traders"
+        tools:layout="@layout/fragment_trader" />
+    <fragment
+        android:id="@+id/investor"
+        android:name="com.example.ioc.ui.Investorclass.Investor"
+        android:label="Investors"
+        tools:layout="@layout/fragment_investor" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.ioc.ui.settings.Settings"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/farmer"
+        android:name="com.example.ioc.ui.farmerclass.farmer"
+        android:label="Farmers"
+        tools:layout="@layout/fragment_farmer" />
+    <fragment
+        android:id="@+id/work"
+        android:name="com.example.ioc.ui.work.work"
+        android:label="Workers"
+        tools:layout="@layout/fragment_work" />
+    <fragment
+        android:id="@+id/teams"
+        android:name="com.example.ioc.teams"
+        android:label="Teams &amp; conditions"
+        tools:layout="@layout/fragment_teams" />
+    <fragment
+        android:id="@+id/help"
+        android:name="com.example.ioc.help"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+
+
+</navigation>
